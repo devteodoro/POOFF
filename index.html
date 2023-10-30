@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <title>POOFF Agência</title>
 </head>
@@ -16,18 +17,28 @@
                 <nav>
                     <ul>
                         <li><a href="#">HOME</a></li>
-                        <li><a href="#">QUEM SOMOS</a></li>
+                        <li><a href="#">AGÊNCIA</a></li>
                         <li><a href="#">SERVIÇOS</a></li>
                         <li><a href="#">CONTATO</a></li>
                     </ul>
                 </nav>
-                <div class="containerBntMenu">
-                    <button>MENU</button>
-                </div>
+                <div id="menu-btn" class="fas fa-bars"></div>
             </div>
         </div>
+        <div id="menu-mobile">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" data-text="HOME">HOME</a></li>
+                    <li><a href="#" data-text="AGÊNCIA">AGÊNCIA</a></li>
+                    <li><a href="#" data-text="SERVIÇOS">SERVIÇOS</a></li>
+                    <li><a href="#" data-text="CONTATO">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="banner"></section>
+    <section class="banner">
+        <img src="../img/banner1.png" alt="Banner POOFF Agência digital" srcset="" width="100%" height="100%">
+    </section>
 
 
     <script src="./scripts/menu.js"></script>
