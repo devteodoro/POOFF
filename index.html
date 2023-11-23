@@ -1,52 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
-    <title>POOFF Agência</title>
+    <title>POOFF Agência Digital</title>
+
+    <!--CSS STYLE-->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!--ICONS-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--SWIPER CSS-->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <div class="flex">
-                <a href="#" >
-                    <img class="logo" src="./img/Logo_BRANCA.png" alt="Logo da POOFF Agência">
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">AGÊNCIA</a></li>
-                        <li><a href="#">SERVIÇOS</a></li>
-                        <li><a href="#">CONTATO</a></li>
-                    </ul>
-                </nav>
-                <div id="menu-btn" class="fas fa-bars"></div>
-            </div>
-        </div>
-        <div id="menu-mobile">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#" data-text="HOME">HOME</a></li>
-                    <li><a href="#" data-text="AGÊNCIA">AGÊNCIA</a></li>
-                    <li><a href="#" data-text="SERVIÇOS">SERVIÇOS</a></li>
-                    <li><a href="#" data-text="CONTATO">CONTATO</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <a href="#home">
+            <img src="/img/Logo_BRANCA.png" alt="Logo POOOF" class="logo">
+        </a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#agencia">Agência</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contatos</a>
+        </nav>
     </header>
-    <section class="banner">
-        <img src="./img/banner1.png" alt="Banner POOFF Agência digital" srcset="" width="100%" height="100%">
-    </section>
     <main>
-        <section>
-            <span>blablabla</span>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Hello, we are <span>POOFF</span></h1>
+                <div class="text-animate">
+                    <h3>Agência de Marketing Digital</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate vitae dolores, labore modi veniam? Quia impedit aliquam eum enim quos itaque dolores quae consectetur, quo harum.</p>
+
+                <div class="btn-box">
+                    <a href="#servicos" class="btn">Hire me</a>
+                    <a href="#contato" class="btn">Let's Talk</a>
+                </div>
+            </div>
+
+            <div class="home-sci">
+                <a href="https://www.facebook.com/pooffagencia/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/pooffagencia"><i class='bx bxl-instagram'></i></a>
+                <a href="https://l.instagram.com/?u=http%3A%2F%2Fwa.me%2F5521993068832&e=AT23MeTgzzFL4E9JTNqlTtSB206uye2XvfZpXJK2lfD8oqYAuq-RXhVvQlENvnwom0oRQ5xSEe6XypMXHM4W556zuENfSXfeAM80wtQ"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+
+            <div class="home-imgHover"></div>
+        </section>
+
+        <section class="about" id="agencia">
+            <h2 class="heading">Sobre a <span>POOFF</span></h2>
+
+            <div class="about-img">
+                <img src="/img/Logo_BRANCA.png" alt="">
+                <span class="circle-spin"></span>
+            </div>
+
+            <div class="about-content">
+                <h3>Agência de marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rerum eius deleniti doloremque culpa. Corrupti dicta distinctio sed sequi ea quaerat ab atque, hic praesentium! Delectus, commodi!</p>
+
+                <div class="btn-box btns">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="services" id="servicos">
+            <h2 class="heading">Serviços <span>POOFF</span></h2>
+
+            <div class="content-slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contato">
+            <h2 class="heading">Contato <span>POOFF</span></h2>
         </section>
     </main>
     <footer>
 
     </footer>
-    <script src="./scripts/menu.js"></script>
+    <!--SWIPER JS-->
+    <script src="/js/swiper-bundle.min.js"></script>
+
+    <!--JAVASCRIPT-->
+    <script src="js/slide.js"></script>
 </body>
 </html>
