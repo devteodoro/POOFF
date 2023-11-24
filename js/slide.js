@@ -4,12 +4,12 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     pagination: true, 
     navigation: true, 
-    spaceBetween: 25,
+    spaceBetween: 30,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 4,
 
     autoplay: {
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     // If we need pagination
