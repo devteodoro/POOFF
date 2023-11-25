@@ -23,7 +23,7 @@
     padding: 25px;
     background-color: var(--second-color);
     text-align: justify;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    /*box-shadow: 10px 10px 10px rgba(255, 253, 253, 0.116);*/
     position: relative;
 }
 
@@ -104,6 +104,7 @@
     z-index: 1;
     transition: .5s;
     position: relative;
+    border-radius: 0.8rem;
 }
 
 .card button::before {
