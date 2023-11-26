@@ -115,6 +115,26 @@ section {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--purple);
+    background-image: linear-gradient(var(--purple), var(--purple));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    /* background-clip: text; */
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 1s;
+}
+
+.home-content .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--purple);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 1s;
 }
 
 .home-content p {
@@ -292,6 +312,7 @@ section {
     border-bottom: .2rem solid var(--second-color);
     border-left: .2rem solid var(--purple);
     border-right: .2rem solid var(--purple);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content {
@@ -458,7 +479,7 @@ section {
 }
 
 
-
+/* BREAKPOINTS */
 @media (max-width:1200px){
     html {
         font-size: 55%;
@@ -629,9 +650,38 @@ section {
 
 
 
+/* KEYFRAMES ANIMATION */
+@keyframes homeBgText {
+    0%,10%,100% {
+        background-position: -50rem 0;
+    }
+
+    65%,85% {
+        background-position: 0 0;
+    }
+}
 
 
+@keyframes homeCursorText {
+    0%,10%,100% {
+        width: 0;
+    }
 
+    65%,78%,85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,81% {
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 
 

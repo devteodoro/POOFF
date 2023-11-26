@@ -1,13 +1,14 @@
 
 var numberCard = 4;
+var swiper;
 
-validaLargura(window.innerWidth, false);
+validaLargura(false);
 
 window.addEventListener('resize', (e) => {
-  validaLargura(window.innerWidth, true);    
+  validaLargura(true);    
 }, true);
 
-function validaLargura(largura, resize) {
+function validaLargura(resize) {
     let width = window.innerWidth;
 
     if(width <= 1200)
@@ -19,11 +20,12 @@ function validaLargura(largura, resize) {
     if(width <= 520)
       numberCard = 1;
 
-    return criarSlide(numberCard);
+    return criarSlide(resize);
 }
 
-function criarSlide () {
-  const swiper = new Swiper('.swiper', {
+function criarSlide (resize) {
+
+  swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
