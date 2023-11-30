@@ -118,10 +118,12 @@ section {
     background-image: linear-gradient(var(--purple), var(--purple));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    /* background-clip: text; */
+     background-clip: text; 
     background-position: 0 0;
     animation: homeBgText 6s linear infinite;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .home-content .text-animate h3::before {
@@ -135,6 +137,8 @@ section {
     z-index: -1;
     animation: homeCursorText 6s linear infinite;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .home-content p {
@@ -654,15 +658,16 @@ section {
 @keyframes homeBgText {
     0%,10%,100% {
         background-position: -50rem 0;
-    }
+    } 
 
     65%,85% {
         background-position: 0 0;
-    }
+    } 
 }
 
 
 @keyframes homeCursorText {
+
     0%,10%,100% {
         width: 0;
     }

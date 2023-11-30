@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --black: #000;
+            --white: #fff;
+            --purple: #6833D1;
+            --light-purple: #8C52FF;
+            --dark-purple: #3D2966;
+            --text-color: #ededed;
+            --second-color: #0f0524;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--black);
+            padding-bottom: 6rem;
+            height: 100vh;
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 70%;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--second-color);
+            border-radius: 5rem;
+            /* -webkit-box-shadow: 0px 0px 24px 5px rgba(61, 41, 102, 1);
+            -moz-box-shadow: 0px 0px 24px 5px rgba(61, 41, 102, 1);
+            box-shadow: 0px 0px 24px 5px rgba(61, 41, 102, 1); */
+            -webkit-box-shadow: 0px 0px 24px 5px rgba(140, 82, 255, 1);
+            -moz-box-shadow: 0px 0px 24px 5px rgba(140, 82, 255, 1);
+            box-shadow: 0px 0px 24px 5px rgba(140, 82, 255, 1);
+        }
+
+
+        .about-img {
+            position: relative;
+            width: 25rem;
+            height: 25rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-img img {
+            width: 90%;
+            border-radius: 50%;
+            border: .2rem solid var(--purple);
+        }
+
+
+        .about-img .circle-spin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border-top: .2rem solid var(--second-color);
+            border-bottom: .2rem solid var(--second-color);
+            border-left: .2rem solid var(--purple);
+            border-right: .2rem solid var(--purple);
+            animation: aboutSpinner 8s linear infinite;
+        }
+
+        .about-content {
+            text-align: center;
+        }
+
+        .about-content h1 {
+            font-size: 4rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .about-content h3 {
+            font-size: 2.6rem;
+            color: var(--text-color);
+        }
+
+        .container-button-card {
+            display: flex;
+            justify-content: center;
+            width: 25%;
+            height: 4rem;
+        }
+        
+        .card a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            color: var(--purple);
+            border: .2rem solid var(--purple);
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            z-index: 1;
+            transition: .5s;
+            position: relative;
+            border-radius: 0.8rem;
+        }
+        
+        .card a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--purple);
+            z-index: -1;
+            transition: .5s;
+        }
+        
+        .card a:hover {
+            color: var(--black);
+        }
+        
+        .card a:hover::before {
+            width: 100%;
+        }
+
+        @keyframes aboutSpinner {
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
