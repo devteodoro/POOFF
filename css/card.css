@@ -106,6 +106,7 @@
     transition: .5s;
     position: relative;
     border-radius: 0.8rem;
+    margin-top: 1rem;
 }
 
 .card button::before {
@@ -127,8 +128,6 @@
 .card button:hover::before {
     width: 100%;
 }
-
-
 
 .card.active .content-card {
     height: auto;
