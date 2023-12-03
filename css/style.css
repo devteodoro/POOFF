@@ -19,6 +19,7 @@
     --dark-purple:#3D2966;
     --text-color: #ededed;
     --second-color:#0f0524;
+    --banner-color:#020202;
 }
 
 html {
@@ -85,9 +86,25 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('../img/mao-com-lapis.jpg') no-repeat;
+    background-color: var(--banner-color);
+    /* background: url('../img/banner6.png') no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: right; */
+}
+
+.home-image {
+    position: absolute;
+    top:10%;
+    right: 0;
+    width: 100rem;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.home-image img {
+    width: 100%;
+    height: 90%;
 }
 
 .home-content {
@@ -261,7 +278,7 @@ section {
     transition: 3s;
 }
 
-.home-imgHover {
+.home-imgHover:hover {
     background: var(--black);
     opacity: .1;
 }
@@ -395,7 +412,7 @@ section {
     color: var(--text-color);
 }
 
-.contact form .focus {
+/* .contact form .focus {
     position: absolute;
     top:0;
     left: 0;
@@ -413,7 +430,7 @@ section {
 .contact form .textarea-field textarea:focus~.focus,
 .contact form .textarea-field textarea:valid~.focus {
     width: 100%;
-}
+} */
 
 .contact form .textarea-field {
     position: relative;
@@ -487,6 +504,11 @@ section {
 @media (max-width:1200px){
     html {
         font-size: 55%;
+    }
+
+    .home-image {
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
