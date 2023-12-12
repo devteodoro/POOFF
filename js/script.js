@@ -63,3 +63,22 @@ celular.addEventListener("input", () => {
     celular.value = numeroFormatado;
 });
 
+// MODAL CARD
+const modal = document.querySelector('dialog');
+
+function modalOpen(el) {
+    let card = el.parentElement.parentElement;
+    let pathImage = card.querySelector('img').src;
+    pathImage = `.${pathImage.substring(pathImage.indexOf("/img"))}`;
+    let titleCard = card.querySelector('.title-card').innerText;
+    let textCard = card.querySelector('.text-card').innerText;
+
+    modal.querySelector('img').src = pathImage;
+    modal.querySelector('.title-card').innerText = titleCard;
+    modal.querySelector('.text-card').innerText = textCard;
+    modal.showModal();
+}
+
+function modalClose() {
+    modal.close();
+}

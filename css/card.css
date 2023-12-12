@@ -90,7 +90,7 @@
     height: 4rem;
 }
 
-.card button {
+.container-button-card button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +109,7 @@
     margin-top: 1rem;
 }
 
-.card button::before {
+.container-button-card button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -121,11 +121,11 @@
     transition: .5s;
 }
 
-.card button:hover {
+.container-button-card button:hover {
     color: var(--black);
 }
 
-.card button:hover::before {
+.container-button-card button:hover::before {
     width: 100%;
 }
 

@@ -15,6 +15,7 @@
 
     <!--SWIPER CSS-->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
 </head>
 
 <body>
@@ -30,8 +31,6 @@
             <a href="#agencia">Agência</a>
             <a href="#servicos">Serviços</a>
             <a href="#contato">Contatos</a>
-
-            <!--<span class="active-nav"></span>-->
         </nav>
     </header>
     <main>
@@ -134,7 +133,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +159,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -185,7 +184,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +211,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +237,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +262,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +289,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +313,7 @@
                                     </p>
                                 </div>
                                 <div class="container-button-card">
-                                    <button type="button" onclick="readCard(this)">Leia mais</button>
+                                    <button type="button" onclick="modalOpen(this)">Leia mais</button>
                                 </div>
                             </div>
                         </div>
@@ -376,9 +375,23 @@
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
-    <!--SWIPER JS-->
-    <script src="./js/swiper-bundle.min.js"></script>
 
+    <dialog class="dialog_modal">
+        <div class="conteiner_card_modal">
+            <div class="card active" style="width: 40%;">
+                <button type="button" onclick="modalClose()" class="btn_close_modal">X</button>
+                <div class="icon-card">
+                    <img src="#">
+                </div>
+                <div class="content-card">
+                    <h3 class="title-card" id="modal_titel_card"></h3>
+                    <p class="text-card" id="modal_text_card"></p>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="./js/swiper-bundle.min.js"></script>
     <!--JAVASCRIPT-->
     <script src="./js/slide.js"></script>
     <script src="./js/script.js"></script>
