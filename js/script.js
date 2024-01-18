@@ -82,3 +82,11 @@ function modalOpen(el) {
 function modalClose() {
     modal.close();
 }
+
+function toHire(el, plano) {
+    let wp = document.getElementById('lk_wp');
+    let base = "https://web.whatsapp.com/send?phone=5521993068832&text=";
+    let msg = "Olá, gostaria de contratar o plano " + plano;
+    wp.setAttribute('href', base + msg);
+    wp.click();
+}

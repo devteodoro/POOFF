@@ -381,8 +381,128 @@ section {
     background-color: var(--second-color);
 }
 
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.single-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40rem;
+    max-width: 40rem;
+    padding: 3rem;
+    margin-top: 5rem;
+    text-align: center;
+    background: var(--banner-color);
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.9s;
+}
+
+.price {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--purple);
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.deals {
+    margin-top: 10%;
+}
+
+.single-price h1 {
+    font-size:4rem;
+    color: #fff;
+    line-height: 3;
+    text-transform: uppercase;
+}
+
+.price h2 {
+    font-size: 38px;
+    color: #fff;
+}
+
+.deals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-item{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    /* border:1px solid red; */
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.service-item i {
+    color: green;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.service-item i.blockedItem {
+    color: red;
+}
+
+.service-item h4 {
+    display: block;
+    width: 90%;
+    /* border: 1px solid blue; */
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+    text-align: left;
+}
+
+.single-price:hover {
+    background: var(--purple);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    transform: scale(1.1);
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.single-price:hover .price {
+    border-color: #fff;
+}
+
+.single-price button {
+    text-decoration: none;
+    background: var(--purple);
+    color: #fff;
+    padding: 10px 60px;
+    display: inline-block;
+    margin: 10% auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.8rem;
+}
+
+.single-price:hover button {
+    cursor: pointer;
+    background-color: var(--banner-color);
+    color: #fff;
+}
 
 /* SECTION PLANOS */
+
 
 /* SECTION CONTATOS */
 .contact {
