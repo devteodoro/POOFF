@@ -918,3 +918,68 @@ section {
     background-color: var(--light-purple);
     color: var(--black);
 }
+
+.content-btn-wpp {
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    z-index: 9999;
+}
+
+.pulsar {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.pulsar a {
+
+    cursor: pointer;
+}
+
+.pulsar i {
+    color: #fff;
+    font-size: 4rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.pulsar::before,
+.pulsar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -60px;
+    right: -60px;
+    top: -60px;
+    bottom: -60px;
+    border-radius: 50%;
+    border: 2px solid var(--purple);
+    animation: animarZap 1.5s linear infinite;
+    opacity: 0;
+}
+
+.pulsar::after {
+    animation-delay: .5s;
+}
+
+@keyframes animarZap {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
